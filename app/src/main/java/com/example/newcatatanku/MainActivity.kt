@@ -1,11 +1,11 @@
-package com.example.catatanku
+package com.example.newcatatanku
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
-import com.example.catatanku.databinding.ActivityMainBinding
-import com.example.catatanku.login.LoginActivity
+import com.example.newcatatanku.databinding.ActivityMainBinding
+import com.example.newcatatanku.login.LoginActivity
 import com.google.android.gms.auth.api.signin.GoogleSignIn
 import com.google.android.gms.auth.api.signin.GoogleSignInClient
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions
@@ -23,7 +23,7 @@ class MainActivity : AppCompatActivity() {
         val view = binding.root
         setContentView(view)
         val gso = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
-            .requestIdToken("417887191252-6pjtj97h41frf0j098rdv4hcsq17a13e.apps.googleusercontent.com")
+            .requestIdToken("460415738569-6p7bfv7v12uv91hj5pg0vrmlf3crf775.apps.googleusercontent.com")
             .requestEmail()
             .build()
         mGoogleSignInClient = GoogleSignIn.getClient(this, gso)

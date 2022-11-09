@@ -1,4 +1,4 @@
-package com.example.catatanku.detail
+package com.example.newcatatanku.detail
 
 
 import android.R
@@ -7,8 +7,8 @@ import android.os.Bundle
 import android.view.MenuItem
 import androidx.annotation.NonNull
 import androidx.appcompat.app.AppCompatActivity
-import com.example.catatanku.databinding.ActivityNoteDetailBinding
-import com.example.catatanku.home.action.EditNoteActivity
+import com.example.newcatatanku.databinding.ActivityNoteDetailBinding
+import com.example.newcatatanku.home.action.EditNoteActivity
 
 
 class NoteDetailActivity : AppCompatActivity() {

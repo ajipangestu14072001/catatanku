@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.example.catatanku">
+    package="com.example.newcatatanku">
 
     <uses-permission android:name="android.permission.INTERNET"/>
 
@@ -16,22 +16,22 @@
         android:theme="@style/Theme.Catatanku"
         tools:targetApi="31">
         <activity
-            android:name=".home.action.CreateNotesActivity"
+            android:name="com.example.newcatatanku.home.action.CreateNotesActivity"
             android:exported="false" />
         <activity
-            android:name=".detail.NoteDetailActivity"
+            android:name="com.example.newcatatanku.detail.NoteDetailActivity"
             android:exported="false" />
         <activity
-            android:name=".home.action.EditNoteActivity"
+            android:name="com.example.newcatatanku.home.action.EditNoteActivity"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name="com.example.newcatatanku.MainActivity"
             android:exported="false" />
         <activity
-            android:name=".home.HomeActivity"
+            android:name="com.example.newcatatanku.home.HomeActivity"
             android:exported="false" />
         <activity
-            android:name=".login.LoginActivity"
+            android:name="com.example.newcatatanku.login.LoginActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

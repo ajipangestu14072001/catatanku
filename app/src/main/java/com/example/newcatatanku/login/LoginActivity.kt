@@ -1,12 +1,12 @@
-package com.example.catatanku.login
+package com.example.newcatatanku.login
 
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import com.example.catatanku.databinding.ActivityLoginBinding
-import com.example.catatanku.helper.SavedPreference
-import com.example.catatanku.home.HomeActivity
+import com.example.newcatatanku.databinding.ActivityLoginBinding
+import com.example.newcatatanku.helper.SavedPreference
+import com.example.newcatatanku.home.HomeActivity
 import com.google.android.gms.auth.api.signin.GoogleSignIn
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount
 import com.google.android.gms.auth.api.signin.GoogleSignInClient
@@ -29,7 +29,7 @@ class LoginActivity : AppCompatActivity() {
         setContentView(view)
         FirebaseApp.initializeApp(this)
         val gso = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
-            .requestIdToken("417887191252-6pjtj97h41frf0j098rdv4hcsq17a13e.apps.googleusercontent.com")
+            .requestIdToken("460415738569-6p7bfv7v12uv91hj5pg0vrmlf3crf775.apps.googleusercontent.com")
             .requestEmail()
             .build()
         mGoogleSignInClient= GoogleSignIn.getClient(this,gso)
@@ -50,6 +50,8 @@ class LoginActivity : AppCompatActivity() {
     @Deprecated("Deprecated in Java")
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
+        var test = "root"
+        var coba = 1
         if(requestCode==regCode){
             val task: Task<GoogleSignInAccount> = GoogleSignIn.getSignedInAccountFromIntent(data)
             handleResult(task)

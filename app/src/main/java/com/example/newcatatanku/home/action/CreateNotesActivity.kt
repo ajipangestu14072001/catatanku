@@ -1,4 +1,4 @@
-package com.example.catatanku.home.action
+package com.example.newcatatanku.home.action
 
 import android.R
 import android.content.Intent
@@ -7,8 +7,8 @@ import android.view.MenuItem
 import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import com.example.catatanku.databinding.ActivityCreateNotesBinding
-import com.example.catatanku.home.HomeActivity
+import com.example.newcatatanku.databinding.ActivityCreateNotesBinding
+import com.example.newcatatanku.home.HomeActivity
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.firestore.FirebaseFirestore

@@ -1,4 +1,4 @@
-package com.example.catatanku.model
+package com.example.newcatatanku.model
 
 class NotesModel {
     var title: String? = null

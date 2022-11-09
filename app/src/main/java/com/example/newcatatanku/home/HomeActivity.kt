@@ -1,4 +1,4 @@
-package com.example.catatanku.home
+package com.example.newcatatanku.home
 
 import android.content.Intent
 import android.os.Build
@@ -6,8 +6,6 @@ import android.os.Bundle
 import android.util.Log
 import android.view.Gravity
 import android.view.LayoutInflater
-import android.view.View.GONE
-import android.view.View.VISIBLE
 import android.view.ViewGroup
 import android.view.animation.AnimationUtils
 import android.widget.*
@@ -18,14 +16,15 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.StaggeredGridLayoutManager
 import com.bumptech.glide.Glide
-import com.example.catatanku.MainActivity
-import com.example.catatanku.R
-import com.example.catatanku.databinding.ActivityHomeBinding
-import com.example.catatanku.databinding.NotesLayoutBinding
-import com.example.catatanku.detail.NoteDetailActivity
-import com.example.catatanku.home.action.CreateNotesActivity
-import com.example.catatanku.home.action.EditNoteActivity
-import com.example.catatanku.model.NotesModel
+import com.example.newcatatanku.MainActivity
+import com.example.newcatatanku.R
+import com.example.newcatatanku.databinding.ActivityHomeBinding
+import com.example.newcatatanku.databinding.NotesLayoutBinding
+
+import com.example.newcatatanku.detail.NoteDetailActivity
+import com.example.newcatatanku.home.action.CreateNotesActivity
+import com.example.newcatatanku.home.action.EditNoteActivity
+import com.example.newcatatanku.model.NotesModel
 import com.firebase.ui.firestore.FirestoreRecyclerAdapter
 import com.firebase.ui.firestore.FirestoreRecyclerOptions
 import com.google.firebase.auth.FirebaseAuth
@@ -66,8 +65,8 @@ class HomeActivity : AppCompatActivity() {
         binding.profileImage.setOnClickListener{
             startActivity(Intent(this, MainActivity::class.java))
         }
-        val query: Query = firebaseFirestore!!.collection("notes").document(firebaseUser!!.uid)
-            .collection("myNotes").orderBy("title", Query.Direction.ASCENDING)
+        val query: Query = firebaseFirestore?.collection("notes")?.document(firebaseUser!!.uid)
+            ?.collection("myNotes")!!.orderBy("title", Query.Direction.ASCENDING)
 
         val allusernotes: FirestoreRecyclerOptions<NotesModel> =
             FirestoreRecyclerOptions.Builder<NotesModel>().setQuery(

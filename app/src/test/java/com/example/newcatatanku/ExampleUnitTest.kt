@@ -1,4 +1,4 @@
-package com.example.catatanku
+package com.example.newcatatanku
 
 import org.junit.Test
 

@@ -1,4 +1,4 @@
-package com.example.catatanku.helper
+package com.example.newcatatanku.helper
 
 import android.content.Context
 import android.content.SharedPreferences
